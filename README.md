@@ -6,6 +6,7 @@ A Bayesian statistic analysis with R is performed on the biathlon word cup, star
 In the R-code directory we can find the R-markdowns where the actual code was developed.
 
 The code for a dashboard built with dash is instead located in the dashboard directory.
+
 The **Project PDF: [Project](Biathlon_analysis.pdf)** document contains a brief recap of the analysis written in LaTeX.
 
 
