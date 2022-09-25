@@ -7,7 +7,7 @@ In the R-code directory we can find the R-markdowns where the actual code was de
 
 The code for a dashboard built with dash is instead located in the dashboard directory.
 
-The **Project PDF: [Project](Biathlon_analysis.pdf)** document contains a brief recap of the analysis written in LaTeX.
+The **Project PDF** document contains a brief recap of the analysis written in LaTeX - [Project](Biathlon_analysis.pdf).
 
 
 **For a better view of the repository and the R codes it is recommended to use the following link: 
