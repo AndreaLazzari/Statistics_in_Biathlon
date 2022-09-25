@@ -11,6 +11,6 @@ The **Project PDF** document contains a brief recap of the analysis written in L
 
 
 **For a better view of the repository and the R codes it is recommended to use the following link: 
-[Project](https://andrealazzari.github.io/AdvancedStatisticForPhysicalAnalysis/).**
+[Project](https://andrealazzari.github.io/Statistics_in_Biathlon/).**
 
 The project is carried out in [R](https://www.r-project.org/). 
