@@ -1,6 +1,9 @@
 # Statistics in Biathlon
 Final project of the course of Advanced Statistics for Physical Analysis - Year 2021/22
 
+Carried out with
+- [Tommaso Amico](https://github.com/tommasoamico)
+
 ## Overview
 A Bayesian statistic analysis with R is performed on the biathlon word cup, starting from the 2014 season.
 In the R-code directory we can find the R-markdowns where the actual code was developed.
