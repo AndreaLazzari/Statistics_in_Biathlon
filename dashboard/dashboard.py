@@ -1,5 +1,5 @@
 import dash
-from dash import dcc, Dash
+from dash import dcc , Dash
 from dash import html
 import pandas as pd
 import plotly.express as px
@@ -13,26 +13,26 @@ import scipy as scp
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
-
-
-
 efficiency_samples_m = pd.read_csv('efficiency_m.csv')
 efficiency_samples_w = pd.read_csv('efficiency_w.csv')
 samples_df = pd.concat([efficiency_samples_m, efficiency_samples_w], axis=1)
 
+all_names = np.union1d(list(efficiency_samples_m.columns), 
+                       list(efficiency_samples_w.columns))
 
-all_names = np.union1d(list(efficiency_samples_m.columns), list(efficiency_samples_w.columns))
 
 app.layout = html.Div([
+    
     
     html.Div([
         html.Label('Select your athletes', style={'font-size':18, 'margin-bottom':-30}),
         html.Hr(),
         html.Label('For a clearer plot we suggest not to choose more than 4-5 competitors at a time', style={'margin-top':'-30px', 'font-size':10}),
-        dcc.Dropdown(all_names,
-                     all_names[0],
+        dcc.Dropdown(id = 'athlete_selection',
+                     options=[{'label': x, 'value': x} for x in all_names],
+                     value=None,
                      multi=True, style={ 'width':'1000px','height':'37px', 'margin-bottom':'50px'},
-                    id = 'athlete_selection', searchable=False, placeholder='Select your athletes'
+                     searchable=False, placeholder='Select your athletes'
                     ),
         html.Hr(),
     ]),
