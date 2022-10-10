@@ -1,7 +1,7 @@
 # Statistics in Biathlon
 Final project of the course of Advanced Statistics for Physical Analysis - Year 2021/22
 
-Carried out with
+Carried out with:
 - [Tommaso Amico](https://github.com/tommasoamico)
 
 ## Overview
