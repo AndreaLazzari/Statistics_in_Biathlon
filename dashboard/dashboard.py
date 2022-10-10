@@ -1,5 +1,5 @@
 import dash
-from dash import dcc
+from dash import dcc, Dash
 from dash import html
 import pandas as pd
 import plotly.express as px
@@ -13,10 +13,15 @@ import scipy as scp
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
+
+
+
 efficiency_samples_m = pd.read_csv('efficiency_m.csv')
 efficiency_samples_w = pd.read_csv('efficiency_w.csv')
 samples_df = pd.concat([efficiency_samples_m, efficiency_samples_w], axis=1)
 
+
+all_names = np.union1d(list(efficiency_samples_m.columns), list(efficiency_samples_w.columns))
 
 app.layout = html.Div([
     
