@@ -30,9 +30,9 @@ app.layout = html.Div([
         html.Label('For a clearer plot we suggest not to choose more than 4-5 competitors at a time', style={'margin-top':'-30px', 'font-size':10}),
         dcc.Dropdown(id = 'athlete_selection',
                      options=[{'label': x, 'value': x} for x in all_names],
-                     value=None,
+                     value=all_names[0],
                      multi=True, style={ 'width':'1000px','height':'37px', 'margin-bottom':'50px'},
-                     searchable=False, placeholder='Select your athletes'
+                     searchable=True, placeholder='Select your athletes'
                     ),
         html.Hr(),
     ]),
@@ -48,7 +48,7 @@ app.layout = html.Div([
     Output('athlete_efficiency', 'figure'),
     Input('athlete_selection', 'value'))
 def update_graph(athletes):
-    fig = px.histogram(samples_df, x=athletes, histnorm='probability density')
+    fig = px.histogram(samples_df, x=athletes, histnorm='probability density', barmode='overlay')
     fig.update_layout({
     'plot_bgcolor': 'rgba(0, 0, 0, 0)',
     })
